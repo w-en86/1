@@ -1,0 +1,6 @@
+com\lening\service\StudentService.class
+com\lening\controller\StudentController.class
+com\lening\mapper\StudentMapper.class
+com\lening\entity\StudentBean.class
+com\lening\service\impl\StudentServiceImpl.class
+com\lening\entity\NewTable.class

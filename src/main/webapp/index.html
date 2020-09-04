@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>快速入门VUE</title>
+    <script src="vuejs/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <div id="app">
+            {{message}}
+        <button v-on:click="fun1('good')">点击改变</button>
+        <input type="text" v-on:keydown="fun2('good',$event)">
+    </div>
+    <script>
+        new Vue({
+            el:'#app',// 表示当前的div对象的管辖区域
+            data:{
+                message:'hello Vue' // 尾部不加分号
+            },
+            methods:{
+                fun1:function (msg) {
+                    this.message=msg;
+                },
+                fun2:function (msg,event) {
+                    if (!((event.keyCode>=48&&event.keyCode<=57)||event.keyCode==8||event.keyCode==46)){
+                        event.preventDefault();
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
