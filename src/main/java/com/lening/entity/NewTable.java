@@ -11,6 +11,9 @@ import java.io.Serializable;
  */
 @Data
 public class NewTable implements Serializable {
+
+
+    /*添加实体类*/
     private Integer id;
     private String name;
     private String cid;
